@@ -1,0 +1,25 @@
+{
+  "name": "netkeiba-check-off",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "netkeibaの調教評価を元に印を付ける。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://race.netkeiba.com/race/oikiri.html*"
+      ],
+      "js": [
+        "scripts/config.js",
+        "scripts/content.js"
+      ]
+    }
+  ]
+}
